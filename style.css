@@ -1,0 +1,826 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: f1bff;
+}
+.section-padding{
+    padding: 100px 0;
+}
+.carousal-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 200px;
+    z-index: 2;
+}
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0,7);
+    z-index: 1;
+}
+/* Tambahkan gaya hide pada navbar */
+/* Your CSS styles for the navbar */
+.navbar {
+    transition: top 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navbar-light .navbar-brand {
+    color: red;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+.nav-link:hover{
+    background-color: red;
+    transition: .2s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 8px;
+}
+.navbar-nav .nav-item{
+    margin-left: 0px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+    display: inline-block;
+        /* Set display to inline-block */
+    padding: 10px 15px;
+}
+
+.w-100{
+    height: 100vh;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+  .container-produk {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .box-pertama {
+      flex: 2;
+      /* Memberi ruang lebih besar untuk teks */
+  }
+
+  .product-description {
+      padding: 0 20px;
+      /* Menambahkan padding untuk memisahkan teks dari tepi */
+  }
+
+  .box {
+      flex: 1;
+      /* Memberi ruang lebih kecil untuk gambar */
+  }
+
+  .box-image {
+      max-width: 100%;
+      height: auto;
+  }
+  ?
+  /*section slide 2*/
+  .product-description,
+  .box-image {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+  }
+
+  .animate {
+      opacity: 1;
+  }
+  @keyframes slideFromRight {
+      from {
+          transform: translateX(100%);
+      }
+
+      to {
+          transform: translateX(0);
+      }
+  }
+
+  @keyframes slideFromLeft {
+      from {
+          transform: translateX(-100%);
+      }
+
+      to {
+          transform: translateX(0);
+      }
+  }
+
+
+
+
+
+  /*section galeri*/
+    
+  /*galeri pertama*/
+        .container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container h2{
+    text-align: center;
+}
+
+.foto-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    transition: transform 0.5s ease; /* transisi saat menggeser */
+    width: 100%;
+    padding-bottom: 20px; /* untuk ruang scrollbar */
+    border: 1px solid #ddd; /* efek border */
+    border-radius: 10px; /* efek border radius */
+}
+
+.foto-container {
+    display: inline-block;
+}
+
+.foto {
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.5s ease; /* transisi saat menggeser */
+}
+
+.foto img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px; /* efek border radius */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Gaya untuk scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+  
+  /*ikon slide 5*/
+ .ikon-section {
+     padding: 0px 0;
+     background-color: #f8f9fa;
+     text-align: center;
+ }
+
+ .ikon-container {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+
+ .ikon {
+     width: 25%;
+     /* Membuat 4 ikon dalam 1 baris */
+     margin-bottom: 20px;
+     text-align: center;
+ }
+ .ikon i{
+    font-size: 65px;
+    color: red;
+ }
+
+ .ikon img {
+     width: 80px;
+     height: 80px;
+     margin-bottom: 10px;
+ }
+
+ .ikon p {
+     font-size: 16px;
+     color: #333;
+ }
+
+ /*slide 6*/
+.company-info {
+    padding: 50px 0;
+}
+
+.logo img {
+    width: 70%;
+    /* Mengatur lebar gambar */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    /* Mengatur margin atas dan bawah menjadi 0, dan margin kiri-kanan menjadi otomatis (membuat logo berada di tengah) dengan tambahan jarak 20px ke bawah */
+}
+
+.info {
+    text-align: center;
+    /* Mengatur teks menjadi berada di tengah */
+}
+
+.info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .logo img {
+        width: 100%;
+        /* Mengembalikan lebar gambar menjadi 100% saat tampilan responsif */
+    }
+}
+
+/*video youtube*/
+.video-section {
+    padding: 50px 0;
+}
+
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* Untuk menjaga aspek rasio video (lebar/tinggi) 16:9 */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*slide menghubungi*/
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.info-item {
+    flex-basis: 30%;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-item span {
+    display: block;
+    color: #666;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+    .contact-info {
+        flex-wrap: wrap;
+    }
+
+    .info-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/*untukmaps*/
+.location-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.map-container {
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+}
+
+.location-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/*footer*/
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-section .container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.logo-ne {
+    width: 250px;
+    /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-info p {
+    margin: 5px 20px;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+    .contact-info p {
+        margin: 5px 10px;
+    }
+}
+/*footer staff*/
+.list-footer{
+    text-align: left;
+}
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.staff-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.staff-member h3 {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    margin: 10px;
+    /* Atur jarak antara ikon sosial */
+}
+
+.social-icons img {
+    object-fit: cover;
+        /* Agar gambar berbentuk kotak */
+    border-radius: 5px;
+        /* Agar gambar berbentuk kotak */
+}
+
+@media (max-width: 767px) {
+    .staff-member {
+        flex-basis: 50%;
+        /* Menetapkan lebar 50% pada layar kecil */
+    }
+}
+
+/*---*/
+
+
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-content .contact-info,
+    .footer-content .social-media {
+        margin-bottom: 30px;
+    }
+}
+
+
+ /* Responsif untuk layar kecil */
+ @media screen and (max-width: 768px) {
+     .ikon {
+         width: 100%;
+         /* Satu ikon per baris */
+     }
+ }
+
+  /*responsif*/
+  @media (max-width: 768px) {
+      .container-produk {
+          flex-direction: column;
+          /* Mengubah tata letak menjadi satu kolom pada layar kecil */
+      }
+
+      .box-pertama,
+      .box {
+          flex: initial;
+          /* Mengembalikan fleksibilitas default pada tampilan mobile */
+      }
+  }
+
+
+
+
+@media only screen and (min-widht: 768px) and (max-widht: 991px){
+    .carousel-caption{
+        bottom: 370px;
+    }
+    .carousel-caption p{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-widht: 767px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-style: 12px;
+    }
+}
+
+
+
+/*css-about us*/
+.hookah-coals-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hookah-coals-section h2 {
+    color: black;
+    font-size: 60px;
+    text-align: left;
+}
+.list-li{
+    text-align: left;
+}
+
+
+.ask-price-button {
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.ask-price-button:hover {
+    background-color: red;
+}
+
+.small-font {
+    font-size: 20px;
+    text-align: center;
+    color: red;
+}
+/*about us section 2*/
+.coconut-charcoal-section {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-container img {
+    width: 300px;
+    /* Adjust image size as needed */
+    height: 300px;
+    border-radius: 10px;
+    
+}
+
+.company-details {
+    padding-top: 20px;
+    margin-left: 50px;
+    text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+    .company-info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+}
+/*about us section 3*/
+.coconut-charcoal-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.coconut-charcoal-section h2 {
+    text-align: center;
+}
+
+.coconut-charcoal-section p {
+    text-align: center;
+}
+
+.image-and-sizes-container {
+    display: flex;
+    align-items: center;
+    /* Mengatur konten vertikal di tengah */
+    justify-content: space-between;
+    /* Mengatur jarak antara gambar dan daftar ukuran */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-container {
+    flex: 0 0 auto;
+    /* Gambar akan tetap di kiri */
+}
+
+.image-container img {
+    max-width: 80%;
+    height: 80%;
+}
+
+.sizes-container {
+    flex: 1;
+    /* Mengisi sisa ruang yang tersedia */
+}
+
+.sizes-container h4 {
+    font-size: 10px;
+    margin-top: 0;
+    /* Menghilangkan margin atas pada judul */
+}
+
+.sizes-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sizes-container ul li {
+    margin-bottom: 5px;
+}
+
+.sizes-container p {
+    margin-top: 5px;
+    /* Memberi jarak antara daftar ukuran dan kalimat */
+}
+
+@media (max-width: 768px) {
+    .coconut-charcoal-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+/*section 4 about us*/
+.coconut-packaging {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+.coconut-packaging h2 {
+    text-align: center;
+}
+
+.image-packaging {
+    margin-top: 20px;
+}
+
+.image-wrapper {
+    text-align: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .coconut-packaging {
+        padding: 10px;
+    }
+}
+
+
+
+/*css section staf*/
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set container width and center content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style for staff member */
+.staff-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.staff-member img {
+    width: 100%;
+    max-width: 200px;
+    /* Adjust according to your preference */
+    height: auto;
+    border-radius: 50%;
+    /* Make the image round */
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.staff-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.staff-member p {
+    margin-bottom: 5px;
+}
+
+/* Style for social icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Ensure responsiveness on different screen sizes */
+@media screen and (max-width: 768px) {
+    .col-md-3 {
+        width: 50%;
+    }
+}
+
+/*buyproduct*/
+.purchase-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.purchase-method {
+    flex: 0 0 calc(33.333% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.purchase-method h3 {
+    margin-top: 0;
+}
+
+.purchase-method p {
+    margin-bottom: 10px;
+}
+
+.purchase-method button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .purchase-methods {
+        flex-direction: column;
+    }
+
+    .purchase-method {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
